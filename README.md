@@ -17,7 +17,7 @@
 
 # Ideas to implement
 
-- limit number of likes that a user can give
+- limit number of likes that a user can give to a post or a comment
 - add liking comments feature
 
 # Run
