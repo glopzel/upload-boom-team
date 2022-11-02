@@ -15,6 +15,11 @@
 
 ---
 
+# Ideas to implement
+
+- limit number of likes that a user can send
+- add liking comments feature
+
 # Run
 
 `npm start`
