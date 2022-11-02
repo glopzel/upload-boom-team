@@ -1,17 +1,29 @@
 const Comment = require("../models/Comment");
+const Post = require("../models/Post");
 
 module.exports = {
     createComment: async (req, res) => {
     try {
        await Comment.create({
         comment: req.body.comment,
-        likes: 0,
-        post: req.params.id,
+        postId: req.params.id,
+        userComment: req.user.id,
+        likes : 0,
       });
       console.log("Comment has been added!");
       res.redirect("/post/"+req.params.id);
     } catch (err) {
       console.log(err);
+    }
+  },
+
+  deleteComment: async (req, res) => {
+    try {
+      await Comment.deleteOne({ _id: req.params.commentId });
+      console.log("Deleted Comment!!!!!");
+      res.redirect("/post/" + req.params.id);
+    } catch (err) {
+      res.redirect("/post/" + req.params.id);
     }
   },
 //   likePost: async (req, res) => {
