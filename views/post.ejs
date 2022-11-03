@@ -44,14 +44,16 @@
       </form>
     </div>
 </div>
-<ul>
+<ul class="list-group">
   <% for(var i=0; i<comments.length; i++) {%>
-    <li class="col-6 justify-content-between mt-5">
-      <%= comments[i].comment%>
-      <h3><%= comments[i].createdAt.toLocaleString() %></h3>
+    <li class="col-12 justify-content-between mt-5 list-group-item">
+      <h3>
+        <%= comments[i].comment%>
+      </h3>
+      <span><%= comments[i].createdAt.toLocaleString() %></span>
       <%if(comments[i].userComment == user.id){ %>
-        <form action="/comment/deleteComment/<%= post._id %>/<%= comments[i]._id %>?_method=DELETE" method="POST" class="col-3">
-          <button class="btn btn-primary fa fa-trash" type="submit">Delete</button>
+        <form action="/comment/deleteComment/<%= post._id %>/<%= comments[i]._id %>?_method=DELETE" method="POST" class="col-3 mt-2">
+          <button class="btn btn-primary fa fa-trash" type="submit"></button>
         </form>
         </form>
       <%}%>
