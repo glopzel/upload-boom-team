@@ -5,20 +5,20 @@
       <h2><%= post.title %></h2>
       <h3><%= post.createdAt.toLocaleString() %></h3>
       <img class="img-fluid" src="<%= post.image%>" />
-      <div class="row justify-content-between">
+      <div class="row justify-content-between align-items-center">
         <form
-          class="col-1"
+          class="col-3"
           action="/post/likePost/<%= post.id %>?_method=PUT"
           method="POST"
         > 
           <button class="btn btn-primary fa fa-heart" type="submit"></button>
         </form>
         <!-- there's a class hide, that sets display:none -->
-        <form action="/post/unlikePost/<%= post.id %>?_method=PUT" method="POST">
+        <form action="/post/unlikePost/<%= post.id %>?_method=PUT" method="POST" class="col-3">
           <button class="btn btn-danger fa fa-thumbs-down" type="submit"></button>
         </form>
 
-        <h3 class="col-3">Likes: <%= post.likes %></h3>
+        <h3 class="col-6">Likes: <%= post.likes %></h3>
         <%if(post.user == user.id){ %>
         <form
           action="/post/deletePost/<%= post.id %>?_method=DELETE"
