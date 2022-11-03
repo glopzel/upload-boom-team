@@ -15,7 +15,7 @@
         </form>
         <!-- there's a class hide, that sets display:none -->
         <form action="/post/unlikePost/<%= post.id %>?_method=PUT" method="POST">
-          <button class="btn btn-warning fa fa-heart" type="submit"></button>
+          <button class="btn btn-danger fa fa-thumbs-down" type="submit"></button>
         </form>
 
         <h3 class="col-3">Likes: <%= post.likes %></h3>
