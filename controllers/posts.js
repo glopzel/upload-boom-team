@@ -56,7 +56,21 @@ module.exports = {
           $inc: { likes: 1 },
         }
       );
-      console.log("Likes +1");
+      console.log("Likes +1"); 
+      res.redirect(`/post/${req.params.id}`);
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  unlikePost: async (req, res) => {
+    try {
+      await Post.findOneAndUpdate(
+        { _id: req.params.id },
+        {
+          $inc: { likes: -1 },
+        }
+      );
+      console.log("Likes -1");
       res.redirect(`/post/${req.params.id}`);
     } catch (err) {
       console.log(err);
