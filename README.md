@@ -17,7 +17,6 @@ This social media app uses a MVC framework to complete POST, GET, DELETE, and PU
   - API_KEY = `your cloudinary api key`
   - API_SECRET = `your cloudinary api secret`
 
----
 
 ### Dependencies
 
@@ -27,8 +26,6 @@ This social media app uses a MVC framework to complete POST, GET, DELETE, and PU
 * Express - Backend Framework
 * MongoDB - Backend Storage
 * Passport - Athentication for Node
----
-
 
 
 ### Installing
@@ -47,7 +44,7 @@ npm start
 
 Angela Lopez Z.
 * [Github](https://github.com/glopzel) 
-* [Twitter]](https://twitter.com/glopzel)
+* [Twitter](https://twitter.com/glopzel)
 
 Christian Caille 
 * [Github](https://github.com/c-caille)
